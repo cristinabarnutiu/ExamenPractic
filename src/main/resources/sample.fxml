@@ -1,0 +1,49 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.Controller">
+
+    <TableView fx:id="tableViewCars" editable="true">
+        <columns>
+            <TableColumn fx:id="tableColumnCarId" text="CarId">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnModel" text="Model">
+                <cellValueFactory>
+                    <PropertyValueFactory property="model" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnKm" text="Km">
+                <cellValueFactory>
+                    <PropertyValueFactory property="km" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnDays" text="Days">
+                <cellValueFactory>
+                    <PropertyValueFactory property="days" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <TextField fx:id="txtCarIdId" promptText="car ID" />
+    <TextField fx:id="txtModel" promptText="Model" />
+    <TextField fx:id="txtKm" promptText="Km" />
+    <TextField fx:id="txtDays" promptText="Days" />
+    <Button fx:id="btnAdd" text="Add car" onAction="#btnAddClick" />
+    <TextField fx:id="txtSumKm" promptText="Sum Km" />
+    <TextField fx:id="txtSumKmResultResult" promptText="Sum Km Result" editable="false" />
+    <Button fx:id="btnSumForCar" text="Compute sum for given car" onAction="#btnSumForCarClick" />
+
+</VBox>
